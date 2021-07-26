@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Novo produto</title>
+{% end %}
+{% block content %}
+<div class="form-group">
+    <form method="post" action="/produto/novo">
+        <div class="mb-3">
+            <label for="descricao" class="form-label">Descrição</label>
+            <input type="text" class="form-control" name="descricao"
+                   id="descricao"
+                   placeholder="Informe a descrição do produto" required
+                   autofocus>
+        </div>
+
+        <div class="mb-3">
+            <label for="preco" class="form-label">Preço</label>
+            <input type="text" class="form-control" name="preco" id="preco"
+                   placeholder="Informe a descrição o preço produto" required>
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Salvar</button>
+        </div>
+    </form>
+</div>
+
+{% end %}
