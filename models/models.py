@@ -29,7 +29,8 @@ class Produto:
         query = 'SELECT * from produto'
         produtos = execute_(query)
 
-        list_produtos = list(map(lambda produto: Produto(*produto), produtos))
+        #list_produtos = list(map(lambda produto: Produto(*produto), produtos))
+        list_produtos = [Produto(*produto) for produto in produtos]
 
         return list_produtos
 
